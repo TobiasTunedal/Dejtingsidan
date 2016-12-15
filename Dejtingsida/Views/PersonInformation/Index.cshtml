@@ -1,0 +1,65 @@
+﻿@model IEnumerable<Dejtingsida.Models.PersonInformationModel>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Förnamn)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Efternamn)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ålder)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Stad)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Fakta)
+            </th>
+            <th></th>
+        </tr>
+    
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Förnamn)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Efternamn)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ålder)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Stad)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Fakta)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id=item.PersonID }) |
+                @Html.ActionLink("Details", "Details", new { id=item.PersonID }) |
+                @Html.ActionLink("Delete", "Delete", new { id=item.PersonID })
+            </td>
+        </tr>
+    }
+    
+    </table>
+</body>
+</html>

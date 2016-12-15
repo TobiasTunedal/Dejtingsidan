@@ -1,0 +1,82 @@
+﻿@model Dejtingsida.Models.RegisterViewModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+    <div>
+        <h4>RegisterViewModel</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Password)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Password)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.ConfirmPassword)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.ConfirmPassword)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Förnamn)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Förnamn)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Efternamn)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Efternamn)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Kön)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Kön)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Stad)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Stad)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Ålder)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Ålder)
+            </dd>
+    
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.Email }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+</body>
+</html>

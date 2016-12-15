@@ -1,0 +1,66 @@
+﻿@model Dejtingsida.Models.PersonInformationModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+    <div>
+        <h4>PersonInformationModel</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Förnamn)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Förnamn)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Efternamn)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Efternamn)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Ålder)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Ålder)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Stad)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Stad)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Fakta)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Fakta)
+            </dd>
+    
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.PersonID }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+</body>
+</html>
