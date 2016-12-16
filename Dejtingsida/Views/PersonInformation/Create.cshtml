@@ -1,4 +1,5 @@
 ﻿@model Dejtingsida.Models.PersonInformationModel
+    @using Microsoft.AspNet.Identity
 
 
 <!DOCTYPE html>
@@ -17,10 +18,41 @@
     {
         @Html.AntiForgeryToken()
         
+
         <div class="form-horizontal">
-            <h4>PersonInformationModel</h4>
+
+
+            <h2 class="centerRubrik">DIN PROFIL</h2>
+
+
+
+
             <hr />
             @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            <div class="profilepicture">
+
+                <dt>Profilbild</dt>
+                <dd>
+                    @if (User.Identity.GetUserName() != null)
+                {
+                    var imgUrl = Url.Content("~/Content/images/profile/" + User.Identity.GetUserName() + ".png") + "?time=" + DateTime.Now.ToString();
+                        <div class="upimage">
+                            <div class="accimg">
+                                <img src="@imgUrl" heigh="250" width="250" float="right" />
+                            </div>
+                            <div class="mngimg">
+                                @using (Html.BeginForm("UploadPhoto", "Manage", FormMethod.Post, new { enctype = "multipart/form-data" }))
+                                {
+                                    <div class="btn btn-default browseimg">
+                                        <input type="file" name="file" , id="files" onchange="this.form.submit()" />
+                                    </div>
+                                }
+                            </div>
+                        </div>
+                    }
+                </dd>
+            </div>
+
             <div class="form-group">
                 @Html.LabelFor(model => model.Förnamn, htmlAttributes: new { @class = "control-label col-md-2" })
                 <div class="col-md-10">
@@ -56,14 +88,14 @@
             <div class="form-group">
                 @Html.LabelFor(model => model.Fakta, htmlAttributes: new { @class = "control-label col-md-2" })
                 <div class="col-md-10">
-                    @Html.EditorFor(model => model.Fakta, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.TextAreaFor(model => model.Fakta, new { rows = 4, cols = 40} )
                     @Html.ValidationMessageFor(model => model.Fakta, "", new { @class = "text-danger" })
                 </div>
             </div>
     
             <div class="form-group">
                 <div class="col-md-offset-2 col-md-10">
-                    <input type="submit" value="Create" class="btn btn-default" />
+                    <input type="submit" value="Lägg till information" class="btn btn-default" />
                 </div>
             </div>
         </div>

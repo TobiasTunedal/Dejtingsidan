@@ -1,7 +1,7 @@
 ﻿@model IEnumerable<Dejtingsida.Models.PersonInformationModel>
 
 @{
-    Layout = null;
+    ViewBag.Title = "Index";
 }
 
 <!DOCTYPE html>
@@ -13,7 +13,7 @@
 </head>
 <body>
     <p>
-        @Html.ActionLink("Create New", "Create")
+        
     </p>
     <table class="table">
         <tr>
@@ -30,7 +30,7 @@
                 @Html.DisplayNameFor(model => model.Stad)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Fakta)
+                
             </th>
             <th></th>
         </tr>
@@ -53,9 +53,9 @@
                 @Html.DisplayFor(modelItem => item.Fakta)
             </td>
             <td>
-                @Html.ActionLink("Edit", "Edit", new { id=item.PersonID }) |
-                @Html.ActionLink("Details", "Details", new { id=item.PersonID }) |
-                @Html.ActionLink("Delete", "Delete", new { id=item.PersonID })
+                
+                @Html.ActionLink("Till profilen", "Details", new { id=item.PersonID }) 
+               
             </td>
         </tr>
     }

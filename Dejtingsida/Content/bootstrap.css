@@ -84,6 +84,17 @@ body {
 #mininfolista{
     list-style-type: none;
 }
+.centerRubrik{
+    text-align: center;
+}
+.profilepicture{
+    float: right;
+}
+.upimage{
+    float: right;
+    padding-left: 100px;
+
+}
 a:focus {
   outline: thin dotted;
 }

@@ -13,14 +13,14 @@ namespace Dejtingsida.Controllers
             return View();
         }
 
-        public ActionResult About()
+        public ActionResult Create()
         {
             ViewBag.Message = "Your application description page.";
 
             return View();
         }
 
-        public ActionResult Contact()
+        public ActionResult LetaPartner()
         {
             ViewBag.Message = "Your contact page.";
 
