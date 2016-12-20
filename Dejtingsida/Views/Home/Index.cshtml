@@ -1,4 +1,6 @@
-﻿@{
+﻿@model IEnumerable<Dejtingsida.Models.PersonListModel>
+
+@{
     ViewBag.Title = "Home Page";
 }
 
@@ -9,21 +11,33 @@
 
 <div class="row">
     <div class="col-md-4">
+
+
+
+
         <h2>Linköping</h2>
-        <img class="Profilbilder"src="http://www.farmstart.ca/wp-content/uploads/2008/07/03farmer4-650.jpg" alt="Bert Jonsson"/>
-        <h2>Kristianstad</h2>
-        <img class="Profilbilder" src="http://www.rappnews.com/wp-content/uploads/2012/10/theRappLibrary-4W.jpg" alt="Rita Jungfeldt" />
-    </div>
+       <h5>Bert Jonsson</h5>
+           <img class="Profilbilder" src="http://www.farmstart.ca/wp-content/uploads/2008/07/03farmer4-650.jpg" alt="Bert Jonsson" />
+
+            <h2>Kristianstad</h2>
+            <h5>Rita Jungfeldt</h5>
+            <img class="Profilbilder" src="http://www.rappnews.com/wp-content/uploads/2012/10/theRappLibrary-4W.jpg" alt="Rita Jungfeldt" />
+</div>
     <div class="col-md-4">
         <h2>Arboga</h2>
+        <h5>Klas Ingemansson</h5>
        <img class ="Profilbilder"src="https://fthmb.tqn.com/x8LTfuF2kOYv_uZP_Q6anrgbWt8=/768x0/filters:no_upscale()/about/459431307-57aa84a55f9b58974a2c60af.jpg" alt="Klas Ingemansson" />
        <h2>Leksand</h2>
+        <h5>Sergio Busquets</h5>
+        <p hidden="hidden"></p>
        <img class="Profilbilder" src="http://www.nfu.ca/sites/www.nfu.ca/files/Dean%20Harder.jpg" alt="Sergio Busquets" />
     </div>
     <div class="col-md-4">
         <h2>Junsele</h2>
+        <h5>Ing-britt Kåresten</h5>
        <img class="Profilbilder" src="http://www.edp24.co.uk/polopoly_fs/1.4655737.1471017410!/image/image.jpg_gen/derivatives/landscape_630/image.jpg" alt="Ing-britt Kåresten" />
         <h2>Haparanda</h2>
-        <img class="Profilbilder" src="http://image2.turizm.ru/CE/pub/page/2388/00.jpg" />
+        <h5>Majvor Lenson</h5>
+        <img class="Profilbilder" src="http://image2.turizm.ru/CE/pub/page/2388/00.jpg" alt="Majvor Lenson"/>
     </div>
 </div>

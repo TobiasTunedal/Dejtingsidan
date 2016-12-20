@@ -207,6 +207,7 @@
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\PersonContext.cs" />
     <Compile Include="Models\PersonInformationModel.cs" />
+    <Compile Include="Models\PersonListModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -281,6 +282,7 @@
     <Content Include="Views\PersonInformation\Details.cshtml" />
     <Content Include="Views\PersonInformation\Edit.cshtml" />
     <Content Include="Views\PersonInformation\Index.cshtml" />
+    <Content Include="Views\PersonInformation\SearchPeople.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -15,6 +15,15 @@
     <p>
         
     </p>
+
+
+    @using (Html.BeginForm("SearchPeople", "PersonInformation"))
+    {
+        <p>
+            Namn: @Html.TextBox("name")
+            <input type ="Submit" value="Sök person"/>
+        </p>
+    }
     <table class="table">
         <tr>
             <th>
@@ -30,7 +39,7 @@
                 @Html.DisplayNameFor(model => model.Stad)
             </th>
             <th>
-                
+                @Html.DisplayNameFor(model => model.Fakta)
             </th>
             <th></th>
         </tr>

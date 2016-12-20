@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Dejtingsida.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,8 +9,11 @@ namespace Dejtingsida.Controllers
 {
     public class HomeController : Controller
     {
+        private PersonContext db = new PersonContext();
         public ActionResult Index()
         {
+            var users = db.PersonInformationModels.OrderBy(x => x.PersonID).Take(6).ToList();
+            
             return View();
         }
 
@@ -33,5 +37,6 @@ namespace Dejtingsida.Controllers
             return View();
         }
         
+     
     }
 }

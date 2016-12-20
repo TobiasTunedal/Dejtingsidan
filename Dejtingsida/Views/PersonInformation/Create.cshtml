@@ -12,8 +12,8 @@
 <body>
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/jqueryval")
-    
-    
+
+      
     @using (Html.BeginForm()) 
     {
         @Html.AntiForgeryToken()
@@ -29,29 +29,7 @@
 
             <hr />
             @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-            <div class="profilepicture">
-
-                <dt>Profilbild</dt>
-                <dd>
-                    @if (User.Identity.GetUserName() != null)
-                {
-                    var imgUrl = Url.Content("~/Content/images/profile/" + User.Identity.GetUserName() + ".png") + "?time=" + DateTime.Now.ToString();
-                        <div class="upimage">
-                            <div class="accimg">
-                                <img src="@imgUrl" heigh="250" width="250" float="right" />
-                            </div>
-                            <div class="mngimg">
-                                @using (Html.BeginForm("UploadPhoto", "Manage", FormMethod.Post, new { enctype = "multipart/form-data" }))
-                                {
-                                    <div class="btn btn-default browseimg">
-                                        <input type="file" name="file" , id="files" onchange="this.form.submit()" />
-                                    </div>
-                                }
-                            </div>
-                        </div>
-                    }
-                </dd>
-            </div>
+        
 
             <div class="form-group">
                 @Html.LabelFor(model => model.Förnamn, htmlAttributes: new { @class = "control-label col-md-2" })
@@ -96,6 +74,7 @@
             <div class="form-group">
                 <div class="col-md-offset-2 col-md-10">
                     <input type="submit" value="Lägg till information" class="btn btn-default" />
+                    @Html.ActionLink("Lägg till profilbild", "Index", "Manage")
                 </div>
             </div>
         </div>
@@ -103,6 +82,7 @@
     
     <div>
         @Html.ActionLink("Back to List", "Index")
+      
     </div>
 </body>
 </html>

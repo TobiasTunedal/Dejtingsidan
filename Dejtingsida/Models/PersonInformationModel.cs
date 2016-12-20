@@ -23,5 +23,7 @@ namespace Dejtingsida.Models
         [Required]
         [StringLength(250, MinimumLength = 3)]
         public virtual string Fakta { get; set; }
+       // public virtual string Bild { get; set; }
+
     }
 }
